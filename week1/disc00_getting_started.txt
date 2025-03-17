@@ -1,0 +1,10 @@
+https://cs61a.org/disc/disc00/
+https://cs61a.org/disc/sol-disc00/
+
+
+Important: The facts you choose cannot be determined by sight (such as height or hair color).
+They also cannot be based on preferences (such as favorite TV show). Some ideas:
+
+- Places you've been: Paris, Disneyland, In-N-Out
+- Things you've tried: zip-lining, meditation, fishing
+- Stuff you can do: ski, crochet, juggle, recite digits of pi
