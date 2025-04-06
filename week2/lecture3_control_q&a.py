@@ -156,3 +156,66 @@ prime_factors(858)
 ################################
 # Q&A
 ################################
+
+
+def g(z):
+    return z + 3
+
+
+def f(x):
+    y = g(x + 1)
+    return y + 7
+
+
+print(f(1))
+
+x = 2
+
+
+def f():
+    try:
+        print(x)  # type: ignore
+    except UnboundLocalError as e:
+        print(e)
+    x = 3
+    print(x)
+
+
+f()
+
+x = 2
+
+
+def f():
+    global x
+    print(x)
+    x = 3
+    print(x)
+
+
+f()
+
+x = 2
+
+
+def f():
+    print(x)
+
+
+f()
+print(5 / 2)  # 2.5
+print(5 // 2)  # 2
+print(-5 // 2)  # -3
+print(round(5 / 2))  # 2
+print(round(5 // 2))  # 2
+
+# round 在处理整数中间值的时候，会舍入到最近的偶数,仅限于 .5，而不是涉及多个位数
+# 如果想要更加精确的值，不要用 round
+print(round(2.5))  # 2
+print(round(2.51))  # 3
+print(round(3.5))  # 4
+
+# python 中真价值问题
+
+if -12:
+    print("-12 is true")
