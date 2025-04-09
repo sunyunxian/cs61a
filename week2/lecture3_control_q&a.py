@@ -215,7 +215,7 @@ print(round(2.5))  # 2
 print(round(2.51))  # 3
 print(round(3.5))  # 4
 
-# python 中真价值问题
+# python 中真假值问题
 
 if -12:
     print("-12 is true")
