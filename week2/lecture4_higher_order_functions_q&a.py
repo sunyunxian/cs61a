@@ -244,3 +244,53 @@ def has_big_sqrt(x):
 print(has_big_sqrt(1))
 print(has_big_sqrt(1000))
 print(has_big_sqrt(-1000))
+
+"""
+Q&A
+"""
+
+print(lambda x: x * x)  # <function <lambda> at 0x1011f0d60>
+
+
+def sqrt1(y):
+    def is_sqrt_of_y1(x):
+        return square(x) == y
+
+    return search(is_sqrt_of_y1)
+
+
+print(sqrt1(16))
+print(sqrt1(25))
+print(sqrt1(81))
+
+
+def compose1(f, g):
+    return lambda x: f(g(x))
+
+
+f = compose1(lambda x: x * x, lambda y: y + 1)
+print(f(12))
+"""
+f(12) -> lambda 12: f(g(12))
+                    f(13)
+                    169
+"""
+
+
+def g1(x):
+    return x + 1
+
+
+g2 = lambda x: g1  # noqa
+
+print(g2(2)(3))
+# g2(2) = g1
+# g1(3)
+# 4
+
+g3 = lambda x: lambda y: y + 1  # noqa
+
+print(g3(2)(3))
+# g3(2) = lambda y: y + 1
+# lambda 3: y + 3
+# 4
